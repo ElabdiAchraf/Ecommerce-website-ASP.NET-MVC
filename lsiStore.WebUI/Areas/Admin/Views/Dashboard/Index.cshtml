@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = "Admin: Dashboard";
+}
+
+<h2>LSI Store Management</h2>
+
+
+
+<div class="grey-bg container-fluid mb-5" >
+    <section id="minimal-statistics my-5">
+        <div class="row">
+            <div class="col-12 mt-3 mb-1">
+                <h4 class="text-uppercase">Statistics </h4>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="align-self-center">
+                                    <i class="fas fa-users fa-3x text-danger font-large-2 float-left"></i>
+                                </div>
+                                <div class="media-body text-right">
+
+                                    <h3>  <span id="User" class="text-danger">0</span></h3>
+                                    <h3>
+                                        <span>
+                                            @Html.ActionLink(" Total Users", "AppUser", "Account", new { area = "Admin" }, new { @class = "text-danger text-decoration-none" })
+                                        </span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="align-self-center">
+                                    <i class="fas fa-box-open fa-3x text-warning font-large-2 float-left"></i>
+                                </div>
+                                <div class="media-body text-right">
+
+                                    <h3>  <span id="Product" class="text-warning">0</span></h3>
+                                    <h3>
+                                        <span>
+                                            @Html.ActionLink(" Total Products", "Product", "Store", new { area = "Admin" }, new { @class = "text-warning text-decoration-none" })
+                                        </span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="align-self-center">
+                                    <i class="fas fa-list-alt fa-3x text-primary font-large-2 float-left"></i>
+                                </div>
+                                <div class="media-body text-right">
+
+                                    <h3>  <span id="Categ" class="text-primary">0</span></h3>
+                                    <h3>
+                                        <span>
+                                            @Html.ActionLink(" Total Categories", "Category", "Store", new { area = "Admin" }, new { @class = "text-primary text-decoration-none" })
+                                        </span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div id="carouselExampleControls " class="carousel slide my-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/Banner1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/Banner2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/Banner1.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+      
+@section Scripts
+{
+    <script>
+        $().ready(function () {
+            getUserCount();
+            getRoleCount();
+            getProductCount();
+            getCategoryCount();
+            getOrderCount();
+        });
+
+        function getUserCount() {
+            $.ajax({
+                url: '/api/User/GetCount/',
+                type: 'GET',
+                success: function (result) {
+                    $('#User').text(result);
+                },
+                error: function (result) {
+                    //alert("Error:" + result);
+                }
+            });
+        }
+
+        function getRoleCount() {
+            $.ajax({
+                url: '/api/Role/GetCount/',
+                type: 'GET',
+                success: function (result) {
+                    $('#role').text(result);
+                },
+                error: function (result) {
+                    //alert("Error:" + result);
+                }
+            });
+        }
+
+        function getProductCount() {
+            $.ajax({
+                url: '/api/Product/GetCount/',
+                type: 'GET',
+                success: function (result) {
+                    $('#Product').text(result);
+                },
+                error: function (result) {
+                    //alert("Error:" + result);
+                }
+            });
+        }
+
+        function getCategoryCount() {
+            $.ajax({
+                url: '/api/Category/GetCount/',
+                type: 'GET',
+                success: function (result) {
+                    $('#Categ').text(result);
+                },
+                error: function (result) {
+                    //alert("Error:" + result);
+                }
+            });
+        }
+
+        function getOrderCount() {
+            $.ajax({
+                url: '/api/Order/GetCount/',
+                type: 'GET',
+                success: function (result) {
+                    $('#order').text(result);
+                },
+                error: function (result) {
+                    //alert("Error:" + result);
+                }
+            });
+        }
+    </script>
+}

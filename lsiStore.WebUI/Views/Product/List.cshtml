@@ -1,0 +1,46 @@
+﻿@using GameStore.Extension;
+@model List<GameStore.WebUI.Areas.Admin.Models.DTO.ProductDTO>
+@{
+    var counter = 0;
+}
+@Html.Partial("_FrontPartial")
+<section id='content'>
+    @foreach (var item in Model)
+    {
+        if ((counter + 1) % 4 == 1)
+        {
+            @:<div class="row my-5 productitem ">
+            }
+            <div class="col">
+                <div class="card h-100 ">
+                    <a href='/Product/Detail/@item.ProductId'>
+                        <img src="~/images/@item.Image" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <div class="clearfix mb-3">
+                                <span class="float-start badge rounded-pill bg-primary">@item.ProductName</span>
+
+                            </div>
+                            <div class="special_item_price my-4 px-7">
+                                <span class="price-old">@Html.FormattedCurrency(item.Price)</span><span class="price-new">@Html.FormattedCurrency(item.GetDiscountedPrice())</span>
+                            </div>
+                            <div class="text-center my-4">
+                                @using (Html.BeginForm("CreateOrUpdate", "ShoppingCart", FormMethod.Post))
+                                {
+                                    <input type='hidden' name='id' value='@item.ProductId'>
+                                    <input type='hidden' name='quantity' value='0'>
+                                    <input type='submit' class='btn btn-warning' value='Add to Cart'>
+                                }
+                            </div>
+                        </div>
+</div>
+            </div>
+
+
+            if ((counter + 1) % 4 == 0 || counter == Model.Count() - 1)
+            {
+            @:</div>
+        }
+        counter++;
+    }
+</section>

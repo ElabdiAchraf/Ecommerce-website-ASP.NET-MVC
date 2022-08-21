@@ -1,0 +1,10 @@
+C:\Users\lenovo\Desktop\Nouveau dossier (3)\GameStore.WebUI\obj\Debug\LsiStore.WebUI.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\Nouveau dossier (3)\GameStore.WebUI\obj\Debug\LsiStore.WebUI.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\Nouveau dossier (3)\GameStore.WebUI\obj\Debug\GameStore.WebUI.dll
+C:\Users\lenovo\Desktop\Nouveau dossier (3)\GameStore.WebUI\obj\Debug\GameStore.WebUI.pdb
+C:\Users\lenovo\Desktop\LsiStore\lsiStore.WebUI\obj\Debug\GameStore.WebUI.dll
+C:\Users\lenovo\Desktop\LsiStore\lsiStore.WebUI\obj\Debug\GameStore.WebUI.pdb
+C:\Users\lenovo\source\repos\LsiStor\lsiStore.WebUI\obj\Debug\LsiStore.WebUI.csproj.AssemblyReference.cache
+C:\Users\lenovo\source\repos\LsiStor\lsiStore.WebUI\obj\Debug\LsiStore.WebUI.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\source\repos\LsiStor\lsiStore.WebUI\obj\Debug\GameStore.WebUI.dll
+C:\Users\lenovo\source\repos\LsiStor\lsiStore.WebUI\obj\Debug\GameStore.WebUI.pdb

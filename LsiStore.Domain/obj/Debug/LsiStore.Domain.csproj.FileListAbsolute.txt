@@ -1,0 +1,8 @@
+C:\Users\lenovo\Desktop\LsiStore\LsiStore.Domain\obj\Debug\LsiStore.Domain.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\LsiStore\LsiStore.Domain\obj\Debug\LsiStore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\LsiStore\LsiStore.Domain\obj\Debug\GameStore.Domain.dll
+C:\Users\lenovo\Desktop\LsiStore\LsiStore.Domain\obj\Debug\GameStore.Domain.pdb
+C:\Users\lenovo\source\repos\LsiStor\LsiStore.Domain\obj\Debug\LsiStore.Domain.csproj.AssemblyReference.cache
+C:\Users\lenovo\source\repos\LsiStor\LsiStore.Domain\obj\Debug\LsiStore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\source\repos\LsiStor\LsiStore.Domain\obj\Debug\GameStore.Domain.dll
+C:\Users\lenovo\source\repos\LsiStor\LsiStore.Domain\obj\Debug\GameStore.Domain.pdb
